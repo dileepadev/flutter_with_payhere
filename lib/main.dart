@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_with_payhere/app_theme.dart';
 
 import 'home_page.dart';
 
@@ -12,11 +13,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter with PayHere',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: const HomePage(title: 'Flutter with PayHere'),
+      title: AppThemeData().appName,
+      theme: AppThemeData.lightThemeOnly,
+      home: HomePage(title: AppThemeData().appName),
     );
   }
 }

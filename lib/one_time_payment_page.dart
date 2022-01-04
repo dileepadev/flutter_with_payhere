@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_with_payhere/app_theme.dart';
+import 'package:flutter_with_payhere/custom_widgets.dart';
 import 'package:payhere_mobilesdk_flutter/payhere_mobilesdk_flutter.dart';
 
 import 'payhere_payment.dart';
@@ -11,7 +13,8 @@ class OneTimePaymentPage extends StatefulWidget {
 }
 
 class _OneTimePaymentPageState extends State<OneTimePaymentPage> {
-  String paymentStatus = "Not Paid";
+  // This paymentStatus is for future use
+  String? paymentStatus;
 
   payNow() {
     PayHere.startPayment(PayHereOneTimePayment().paymentObject, (paymentId) {
@@ -28,21 +31,32 @@ class _OneTimePaymentPageState extends State<OneTimePaymentPage> {
 
   void setPaymentStatus(String status) {
     setState(() {
-      paymentStatus = "Payment $status!";
+      paymentStatus = status;
+      CustomWidgets().paymentStatus(status);
+      debugPrint(status);
     });
+  }
+
+  @override
+  void initState() {
+    paymentStatus = "Not Paid";
+    super.initState();
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: CustomWidgets().paymentMethodsAppBar("One Time Payment"),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Text("One Time Payment"),
+            CustomWidgets().paymentStatus(paymentStatus!),
+            const SizedBox(
+              height: 50.0,
+            ),
             ElevatedButton(
                 onPressed: () => payNow(), child: const Text("Pay Now")),
-            Text(paymentStatus),
           ],
         ),
       ),

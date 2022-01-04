@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_with_payhere/app_theme.dart';
+import 'package:flutter_with_payhere/custom_widgets.dart';
 import 'package:flutter_with_payhere/one_time_payment_page.dart';
 
 class HomePage extends StatefulWidget {
@@ -16,15 +18,19 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(
         title: Center(child: Text(widget.title)),
-        elevation: 0.0,
-        backgroundColor: const Color.fromRGBO(36, 71, 215, 1.0),
       ),
       body: Column(
         children: [
           Container(
             width: MediaQuery.of(context).size.width,
             height: MediaQuery.of(context).size.width * 0.3,
-            color: const Color.fromRGBO(36, 71, 215, 1.0),
+            decoration: BoxDecoration(
+              borderRadius: const BorderRadius.only(
+                bottomLeft: Radius.circular(80.0),
+                bottomRight: Radius.circular(80.0),
+              ),
+              color: AppThemeData().appColor,
+            ),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
@@ -36,14 +42,23 @@ class _HomePageState extends State<HomePage> {
               ],
             ),
           ),
+          const SizedBox(
+            height: 20.0,
+          ),
+          CustomWidgets().paymentInstruction(),
+          const SizedBox(
+            height: 20.0,
+          ),
           ElevatedButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => const OneTimePaymentPage()),
-                );
-              },
-              child: const Text("One Time Payment")),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => const OneTimePaymentPage()),
+              );
+            },
+            child: const Text("One Time Payment"),
+          ),
         ],
       ),
     );
