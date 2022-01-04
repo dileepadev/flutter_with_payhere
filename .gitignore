@@ -830,6 +830,9 @@ Temporary Items
 # Used by previous versions of JEnv
 .jenv-version
 
+### ------------------------- Project Specific ------------------------- ###
+
+payhere_credentials.dart
 
 
 ### ---------------------------- References ---------------------------- ###

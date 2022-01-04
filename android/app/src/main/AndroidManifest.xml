@@ -1,9 +1,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="dev.dileepabandara.flutter_with_payhere">
+    package="dev.dileepabandara.flutter_with_payhere"
+    xmlns:tools="http://schemas.android.com/tools">
    <application
         android:label="Flutter with PayHere"
         android:name="${applicationName}"
-        android:icon="@mipmap/ic_launcher_2">
+        android:icon="@mipmap/ic_launcher_2"
+        tools:replace="android:label">
         <activity
             android:name=".MainActivity"
             android:exported="true"
