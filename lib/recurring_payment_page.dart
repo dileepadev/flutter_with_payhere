@@ -3,26 +3,26 @@ import 'package:payhere_mobilesdk_flutter/payhere_mobilesdk_flutter.dart';
 import 'payhere_payment.dart';
 import 'custom_widgets.dart';
 
-class OneTimePaymentPage extends StatefulWidget {
-  const OneTimePaymentPage({Key? key}) : super(key: key);
+class RecurringPaymentPage extends StatefulWidget {
+  const RecurringPaymentPage({Key? key}) : super(key: key);
 
   @override
-  _OneTimePaymentPageState createState() => _OneTimePaymentPageState();
+  _RecurringPaymentPageState createState() => _RecurringPaymentPageState();
 }
 
-class _OneTimePaymentPageState extends State<OneTimePaymentPage> {
+class _RecurringPaymentPageState extends State<RecurringPaymentPage> {
   // This paymentStatus is for future use
   String? paymentStatus;
 
   payNow() {
-    PayHere.startPayment(PayHerePayment().paymentObjectOneTime, (paymentId) {
-      debugPrint("One Time Payment Success. Payment Id: $paymentId");
+    PayHere.startPayment(PayHerePayment().paymentRecurring, (paymentId) {
+      debugPrint("Recurring Payment Success. Payment Id: $paymentId");
       setPaymentStatus("Successful");
     }, (error) {
-      debugPrint("One Time Payment Failed. Error: $error");
+      debugPrint("Recurring Payment Failed. Error: $error");
       setPaymentStatus("Failed");
     }, () {
-      debugPrint("One Time Payment Dismissed");
+      debugPrint("Recurring Payment Dismissed");
       setPaymentStatus("Dismissed");
     });
   }
@@ -44,7 +44,7 @@ class _OneTimePaymentPageState extends State<OneTimePaymentPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomWidgets().paymentMethodsAppBar("One Time Payment"),
+      appBar: CustomWidgets().paymentMethodsAppBar("Recurring Payment"),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

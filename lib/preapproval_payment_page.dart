@@ -3,26 +3,27 @@ import 'package:payhere_mobilesdk_flutter/payhere_mobilesdk_flutter.dart';
 import 'payhere_payment.dart';
 import 'custom_widgets.dart';
 
-class OneTimePaymentPage extends StatefulWidget {
-  const OneTimePaymentPage({Key? key}) : super(key: key);
+class PreapprovalPaymentPage extends StatefulWidget {
+  const PreapprovalPaymentPage({Key? key}) : super(key: key);
 
   @override
-  _OneTimePaymentPageState createState() => _OneTimePaymentPageState();
+  _PreapprovalPaymentPageState createState() => _PreapprovalPaymentPageState();
 }
 
-class _OneTimePaymentPageState extends State<OneTimePaymentPage> {
+class _PreapprovalPaymentPageState extends State<PreapprovalPaymentPage> {
   // This paymentStatus is for future use
   String? paymentStatus;
 
   payNow() {
-    PayHere.startPayment(PayHerePayment().paymentObjectOneTime, (paymentId) {
-      debugPrint("One Time Payment Success. Payment Id: $paymentId");
+    PayHere.startPayment(PayHerePayment().paymentObjectPreapproval,
+        (paymentId) {
+      debugPrint("Preapproval Payment Success. Payment Id: $paymentId");
       setPaymentStatus("Successful");
     }, (error) {
-      debugPrint("One Time Payment Failed. Error: $error");
+      debugPrint("Preapproval Payment Failed. Error: $error");
       setPaymentStatus("Failed");
     }, () {
-      debugPrint("One Time Payment Dismissed");
+      debugPrint("Preapproval Payment Dismissed");
       setPaymentStatus("Dismissed");
     });
   }
@@ -44,7 +45,7 @@ class _OneTimePaymentPageState extends State<OneTimePaymentPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomWidgets().paymentMethodsAppBar("One Time Payment"),
+      appBar: CustomWidgets().paymentMethodsAppBar("Preapproval Payment"),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

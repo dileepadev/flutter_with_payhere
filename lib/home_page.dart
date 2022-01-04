@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_with_payhere/app_theme.dart';
 import 'package:flutter_with_payhere/custom_widgets.dart';
 import 'package:flutter_with_payhere/one_time_payment_page.dart';
+import 'package:flutter_with_payhere/preapproval_payment_page.dart';
+import 'package:flutter_with_payhere/recurring_payment_page.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key, required this.title}) : super(key: key);
@@ -23,7 +25,7 @@ class _HomePageState extends State<HomePage> {
         children: [
           Container(
             width: MediaQuery.of(context).size.width,
-            height: MediaQuery.of(context).size.width * 0.3,
+            height: MediaQuery.of(context).size.width * 0.28,
             decoration: BoxDecoration(
               borderRadius: const BorderRadius.only(
                 bottomLeft: Radius.circular(80.0),
@@ -43,22 +45,24 @@ class _HomePageState extends State<HomePage> {
             ),
           ),
           const SizedBox(
-            height: 20.0,
+            height: 10.0,
           ),
           CustomWidgets().paymentInstruction(),
           const SizedBox(
             height: 20.0,
           ),
-          ElevatedButton(
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                    builder: (context) => const OneTimePaymentPage()),
-              );
-            },
-            child: const Text("One Time Payment"),
+          CustomWidgets().paymentOptionButton(
+              context, const OneTimePaymentPage(), "One Time Payment"),
+          const SizedBox(
+            height: 20.0,
           ),
+          CustomWidgets().paymentOptionButton(
+              context, const RecurringPaymentPage(), "Recurring Payment"),
+          const SizedBox(
+            height: 20.0,
+          ),
+          CustomWidgets().paymentOptionButton(
+              context, const PreapprovalPaymentPage(), "Preapproval Payment"),
         ],
       ),
     );

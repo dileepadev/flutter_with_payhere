@@ -141,4 +141,18 @@ class CustomWidgets {
       ],
     );
   }
+
+  ElevatedButton paymentOptionButton(
+      BuildContext context, var pageName, String buttonName) {
+    return ElevatedButton(
+      onPressed: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => pageName),
+        );
+      },
+      child: Text(buttonName),
+      style: ElevatedButton.styleFrom(fixedSize: const Size(200, 50)),
+    );
+  }
 }
