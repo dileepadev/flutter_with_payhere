@@ -11,7 +11,7 @@
 
 ## ✨ About
 
-This **Flutter with PayHere** project is an example of how a flutter application can be integrate with PayHere. It includes PayHere integration with One-time Payment Request, Recurring Payment Request and Preapproval Request for the Flutter app. **This project has been developed as an open source project for educational purposes.**
+This **Flutter with PayHere** project is an example of how a flutter application can be integrated with PayHere. It includes PayHere integration with a One-Time Payment Request, a Recurring Payment Request, and a Preapproval Request for the Flutter app. **This project has been developed as an open source project for educational purposes.**
 
 ### ❓ What is PayHere
 
