@@ -133,7 +133,7 @@ https://dileepabandara.github.io
 If you want to contact me, leave a message via email or Twitter
 
 - Email - <contact.dileepabandara@gmail.com>
-- Twitter - [dileepa_bandara](https://twitter.com/dileepa_bandara)
+- Twitter - [_dileepabandara](https://twitter.com/_dileepabandara)
 
 ## 📜 License
 
