@@ -7,7 +7,7 @@
 ![GitHub](https://img.shields.io/github/license/dileepabandara/flutter_with_payhere?color=yellow)
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/dileepabandara/flutter_with_payhere?color=brightgreen&label=commits)
 
-![Flutter with PayHere](https://dileepabandara.github.io/public-images/projects/flutter-with-payhere/flutter_with_payhere_preview.png)
+![Flutter with PayHere](https://dileepadev.github.io/public-images/projects/flutter-with-payhere/flutter_with_payhere_preview.png)
 
 ## ✨ About
 
@@ -19,9 +19,9 @@ This **Flutter with PayHere** project is an example of how a flutter application
 
 ### 🖼️ Screenshots
 
-![Sample Screenshot](https://dileepabandara.github.io/public-images/projects/flutter-with-payhere/flutter_with_payhere_screenshots_1.png)
+![Sample Screenshot](https://dileepadev.github.io/public-images/projects/flutter-with-payhere/flutter_with_payhere_screenshots_1.png)
 
-![Sample Screenshot](https://dileepabandara.github.io/public-images/projects/flutter-with-payhere/flutter_with_payhere_screenshots_2.png)
+![Sample Screenshot](https://dileepadev.github.io/public-images/projects/flutter-with-payhere/flutter_with_payhere_screenshots_2.png)
 
 ## 🎬 Release Status
 
@@ -58,15 +58,15 @@ This app is developed under the following requirements so be sure to follow them
 
   <a href="https://www.payhere.lk"><img src="https://www.payhere.lk/downloads/images/pay_with_payhere_light.png" alt="Pay with PayHere" width="180"/></a>
 
-    PayHere Payment Options
+  PayHere Payment Options
 
-    <a href="https://www.payhere.lk" target="_blank"><img src="https://www.payhere.lk/downloads/images/payhere_short_banner_dark.png" alt="PayHere" width="500"/></a>
+  <a href="https://www.payhere.lk" target="_blank"><img src="https://www.payhere.lk/downloads/images/payhere_short_banner_dark.png" alt="PayHere" width="500"/></a>
 
-    <!-- <a href="https://www.payhere.lk?utm_source=logo" target="_blank"><img src="https://www.payhere.lk/downloads/images/payhere_square_banner_dark.png" alt="PayHere"  width="400"/></a> -->
+  <!-- <a href="https://www.payhere.lk?utm_source=logo" target="_blank"><img src="https://www.payhere.lk/downloads/images/payhere_square_banner_dark.png" alt="PayHere"  width="400"/></a> -->
 
-    [🔖 PayHere Knowledge Base - Flutter SDK](https://support.payhere.lk/api-&-mobile-sdk/payhere-flutter)
+  [🔖 PayHere Knowledge Base - Flutter SDK](https://support.payhere.lk/api-&-mobile-sdk/payhere-flutter)
 
-    [🔖 PayHere Sandbox & Testing](https://support.payhere.lk/faq/sandbox-and-testing)
+  [🔖 PayHere Sandbox & Testing](https://support.payhere.lk/faq/sandbox-and-testing)
 
 - Whitelist Mobile App Package Name
 
@@ -125,18 +125,18 @@ Thanks to everyone who supported
 ## 👨‍💻 Developed By
 
 Dileepa Bandara  
-©dileepabandara.dev  
-https://dileepabandara.github.io
+©dileepa.dev  
+<https://dileepa.dev>
 
 ## 💬 Contact
 
 If you want to contact me, leave a message via email or Twitter
 
-- Email - <contact.dileepabandara@gmail.com>
-- Twitter - [_dileepabandara](https://twitter.com/_dileepabandara)
+- Email - <contact@dileepa.dev>
+- Twitter - [dileepadev](https://twitter.com/dileepadev)
 
 ## 📜 License
 
 This project is licensed under the MIT License  
-MIT ©dileepabandara.dev  
-See the license file for more details [LICENSE.md](https://github.com/dileepabandara/flutter_with_payhere/blob/main/LICENSE)
+MIT ©dileepa.dev 
+See the license file for more details [LICENSE.md](https://github.com/dileepadev/flutter_with_payhere/blob/main/LICENSE)
